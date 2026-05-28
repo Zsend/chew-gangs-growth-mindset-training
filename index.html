@@ -1,0 +1,1916 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chew Gang's Growth Mindset Training: a simple guided lesson for kids with an embedded video, growth mindset quiz, and bonus 1% Better lesson.">
+  <title>Chew Gang's Growth Mindset Training</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --bg-strong: #eaf0ff;
+      --card: #ffffff;
+      --ink: #162033;
+      --muted: #4b5f82;
+      --soft: #d8e1f2;
+      --line: #d9e2f3;
+      --primary: #3858e9;
+      --primary-dark: #253bb4;
+      --primary-soft: #edf1ff;
+      --good: #0c7a55;
+      --good-soft: #e9f8f2;
+      --warn: #9a5b00;
+      --warn-soft: #fff5dc;
+      --bad: #b42318;
+      --bad-soft: #fff1f0;
+      --shadow: 0 22px 65px rgba(31, 48, 87, .12);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(56, 88, 233, .10) 0%, rgba(56, 88, 233, 0) 36%),
+        linear-gradient(225deg, rgba(12, 122, 85, .08) 0%, rgba(12, 122, 85, 0) 42%),
+        linear-gradient(180deg, #f8fbff 0%, var(--bg) 48%, #ffffff 100%);
+      line-height: 1.55;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(22, 32, 51, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(22, 32, 51, .035) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.65), transparent 70%);
+    }
+
+    a { color: inherit; }
+
+    button, input, textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: .55;
+    }
+
+    .page {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 12px;
+      background: var(--ink);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 10px;
+      z-index: 99;
+    }
+
+    .skip-link:focus {
+      left: 12px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+      gap: 24px;
+      align-items: stretch;
+      margin-top: 12px;
+    }
+
+    .hero-panel,
+    .side-panel,
+    .card {
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(216, 225, 242, .9);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-lg);
+    }
+
+    .hero-panel {
+      padding: clamp(28px, 5vw, 56px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        linear-gradient(135deg, rgba(56, 88, 233, .09), transparent 44%),
+        linear-gradient(315deg, rgba(12, 122, 85, .07), transparent 42%);
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      right: -96px;
+      bottom: -118px;
+      width: 520px;
+      height: 340px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: .42;
+      transform: rotate(-4deg);
+      background: repeating-linear-gradient(135deg, rgba(56, 88, 233, .20) 0 1px, transparent 1px 16px);
+      mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .80) 38%, rgba(0, 0, 0, .25) 100%);
+    }
+
+    .hero-panel > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--primary-dark);
+      background: var(--primary-soft);
+      font-weight: 800;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 820px;
+      margin-bottom: 16px;
+      font-size: clamp(2.05rem, 5.2vw, 4.5rem);
+      line-height: .98;
+      letter-spacing: -.058em;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: clamp(1.55rem, 3vw, 2.25rem);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 1.06rem;
+      line-height: 1.25;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: clamp(1.02rem, 1.5vw, 1.2rem);
+    }
+
+    .hero-actions,
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .quiz-start-row {
+      justify-content: flex-start;
+    }
+
+    .quiz-start-row .button {
+      min-width: min(100%, 220px);
+    }
+
+    .button,
+    .choice,
+    .link-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 850;
+      line-height: 1.1;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease, border-color .16s ease;
+    }
+
+    .button:hover,
+    .choice:hover,
+    .link-button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button.primary,
+    .link-button.primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), #6a3df5);
+      box-shadow: 0 14px 28px rgba(56, 88, 233, .22);
+    }
+
+    .button.secondary,
+    .link-button.secondary {
+      color: var(--ink);
+      background: #fff;
+      border-color: var(--line);
+    }
+
+    .button.success {
+      color: #fff;
+      background: linear-gradient(135deg, #0c7a55, #159a6c);
+      box-shadow: 0 14px 28px rgba(12, 122, 85, .20);
+    }
+
+    .side-panel {
+      padding: 22px;
+      display: grid;
+      gap: 14px;
+      align-content: center;
+    }
+
+    .mission-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: linear-gradient(180deg, #fff, #f7f9ff);
+    }
+
+    .mission-card strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.05rem;
+    }
+
+    .mission-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .96rem;
+    }
+
+    .progress-strip {
+      margin: 22px 0 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .step-pill {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.86);
+      box-shadow: 0 12px 32px rgba(31, 48, 87, .06);
+    }
+
+    .step-pill .number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      margin-bottom: 9px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: .85rem;
+    }
+
+    .step-pill strong {
+      display: block;
+      font-size: .98rem;
+    }
+
+    .step-pill span:last-child {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    main {
+      margin-top: 24px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .card {
+      padding: clamp(22px, 3.3vw, 36px);
+      overflow: clip;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .section-kicker {
+      color: var(--primary-dark);
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .78rem;
+    }
+
+    .section-header p {
+      max-width: 720px;
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .grid-3,
+    .grid-2 {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mini-card,
+    .mindset-box,
+    .note-box,
+    .certificate-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: #fff;
+      padding: 18px;
+    }
+
+    .mini-card p,
+    .mindset-box p,
+    .note-box p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .mindset-box.fixed {
+      background: linear-gradient(180deg, #fff, #fff8f7);
+      border-color: #f3c8c4;
+    }
+
+    .mindset-box.growth {
+      background: linear-gradient(180deg, #fff, #f0fff8);
+      border-color: #bfe7d6;
+    }
+
+    .phrase-list {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .phrase-list li {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(216, 225, 242, .8);
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .video-shell {
+      border-radius: 26px;
+      padding: clamp(12px, 2vw, 18px);
+      background: linear-gradient(135deg, #172033, #263456);
+      box-shadow: 0 24px 70px rgba(22, 32, 51, .22);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.11), transparent 36%),
+        linear-gradient(315deg, rgba(106, 61, 245, .14), transparent 52%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .video-frame {
+      position: relative;
+      z-index: 1;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 18px;
+      background: #0f172a;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #0f172a;
+    }
+
+    .video-caption {
+      position: relative;
+      z-index: 1;
+      margin: 14px 4px 0;
+      color: rgba(255,255,255,.82);
+      font-size: .94rem;
+    }
+
+    .local-warning {
+      margin-top: 16px;
+      border: 1px solid #f4d189;
+      border-radius: var(--radius-md);
+      background: var(--warn-soft);
+      color: #503400;
+      padding: 16px;
+    }
+
+    .local-warning strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .local-warning p {
+      margin: 0;
+    }
+
+    .after-watch {
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: var(--primary-soft);
+      border: 1px solid #cbd6ff;
+    }
+
+    .after-watch p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 26px;
+      font-weight: 720;
+      color: var(--ink);
+    }
+
+    .checklist li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .53em;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 4px rgba(56, 88, 233, .12);
+    }
+
+    .quiz-panel {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: clamp(18px, 3vw, 28px);
+      background: linear-gradient(180deg, #fff, #f8faff);
+    }
+
+    .quiz-topline {
+      display: flex;
+      gap: 14px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .progress-bar {
+      height: 12px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #e8eefb;
+      margin-bottom: 22px;
+    }
+
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--primary), #6a3df5);
+      transition: width .28s ease;
+    }
+
+    .question-title {
+      margin-bottom: 14px;
+      font-size: clamp(1.22rem, 2vw, 1.55rem);
+      line-height: 1.25;
+      letter-spacing: -.02em;
+    }
+
+    .choices {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .choice {
+      width: 100%;
+      min-height: 56px;
+      justify-content: flex-start;
+      text-align: left;
+      border-color: var(--line);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 16px;
+      box-shadow: none;
+    }
+
+    .choice.selected {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .choice.correct {
+      border-color: #8fd7ba;
+      background: var(--good-soft);
+      color: #064f37;
+    }
+
+    .choice.incorrect {
+      border-color: #f1aaa3;
+      background: var(--bad-soft);
+      color: #7a1c14;
+    }
+
+    .feedback {
+      min-height: 56px;
+      margin: 10px 0 16px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--muted);
+    }
+
+    .feedback.good {
+      border-color: #9addc3;
+      background: var(--good-soft);
+      color: #07553b;
+    }
+
+    .feedback.needs-work {
+      border-color: #f2b6b0;
+      background: var(--bad-soft);
+      color: #781f17;
+    }
+
+    .quiz-actions {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      gap: 12px;
+    }
+
+    .quiz-actions .button {
+      width: 100%;
+      min-width: 0;
+      white-space: normal;
+    }
+
+    .result-card {
+      padding: clamp(20px, 3vw, 32px);
+      border-radius: 26px;
+      background: linear-gradient(135deg, #fff, #f7f9ff);
+      border: 1px solid var(--line);
+    }
+
+    .score-number {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 10px 0 8px;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 950;
+      letter-spacing: -.06em;
+      color: var(--primary-dark);
+    }
+
+    .score-number span {
+      font-size: .45em;
+      letter-spacing: 0;
+      color: var(--muted);
+    }
+
+    .review-list {
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .review-item {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .review-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .review-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .bonus-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #b7c5ff;
+      background:
+        linear-gradient(135deg, rgba(237, 241, 255, .94) 0%, #ffffff 42%, #f7f8ff 100%);
+    }
+
+    .bonus-card.unlocked {
+      animation: rewardPop .5s ease both;
+    }
+
+    @keyframes rewardPop {
+      0% { transform: translateY(10px) scale(.99); }
+      60% { transform: translateY(0) scale(1.01); }
+      100% { transform: translateY(0) scale(1); }
+    }
+
+    .unlock-band {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), #6a3df5);
+      color: #fff;
+      font-weight: 900;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      box-shadow: 0 14px 28px rgba(56, 88, 233, .20);
+    }
+
+    .bonus-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(270px, .95fr);
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+
+    .bonus-callout {
+      padding: 22px;
+      border-radius: 24px;
+      border: 1px solid #cbd6ff;
+      background: rgba(237, 241, 255, .75);
+    }
+
+    .bonus-callout p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .big-math {
+      display: grid;
+      place-items: center;
+      min-height: 220px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .big-math .formula {
+      display: block;
+      font-size: clamp(1.8rem, 4.5vw, 3.6rem);
+      font-weight: 950;
+      letter-spacing: -.06em;
+      color: var(--primary-dark);
+      line-height: 1;
+    }
+
+    .big-math .means {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .example-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .example-step {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .example-step strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--primary-dark);
+    }
+
+    .example-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .stack-card {
+      min-width: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(31, 48, 87, .06);
+    }
+
+    .stack-time {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      font-size: .78rem;
+      font-weight: 950;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .stack-card strong {
+      display: block;
+      color: var(--ink);
+      font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+      line-height: 1.1;
+      letter-spacing: -.025em;
+    }
+
+    .stack-card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: .96rem;
+    }
+
+    .stack-example {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: var(--ink);
+      font-weight: 850;
+      overflow-wrap: anywhere;
+    }
+
+    .soft-warning {
+      margin-top: 14px;
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid #f0d48a;
+      background: var(--warn-soft);
+      color: #563900;
+    }
+
+    details.math-details {
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      padding: 14px 16px;
+    }
+
+    details.math-details summary {
+      cursor: pointer;
+      font-weight: 900;
+      color: var(--primary-dark);
+    }
+
+    details.math-details p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    .certificate-card {
+      margin-top: 18px;
+      background: linear-gradient(180deg, #fff, #f9fbff);
+    }
+
+    .certificate-form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 12px 0 16px;
+    }
+
+    .certificate-preview {
+      position: relative;
+      overflow: hidden;
+      margin-top: 14px;
+      padding: clamp(22px, 4vw, 38px);
+      border: 2px solid #b7c5ff;
+      border-radius: 26px;
+      background:
+        linear-gradient(135deg, rgba(237, 241, 255, .96), #ffffff 45%, rgba(233, 248, 242, .82)),
+        #fff;
+      text-align: center;
+      box-shadow: inset 0 0 0 7px rgba(255,255,255,.78), 0 16px 40px rgba(31, 48, 87, .08);
+    }
+
+    .certificate-preview::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(56, 88, 233, .22);
+      border-radius: 18px;
+      pointer-events: none;
+    }
+
+    .certificate-preview::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -170px;
+      width: 360px;
+      height: 360px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(56, 88, 233, .12), transparent 64%);
+      pointer-events: none;
+    }
+
+    .certificate-preview > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .certificate-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      padding: 7px 12px;
+      border: 1px solid rgba(56, 88, 233, .26);
+      border-radius: 999px;
+      color: var(--primary-dark);
+      background: rgba(255,255,255,.78);
+      font-weight: 950;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      font-size: .76rem;
+    }
+
+    .certificate-preview h3 {
+      margin-bottom: 8px;
+      font-size: clamp(1.25rem, 2.6vw, 1.9rem);
+      letter-spacing: -.035em;
+    }
+
+    .certificate-name {
+      max-width: 820px;
+      margin: 12px auto 14px;
+      padding: 8px 10px 12px;
+      border-bottom: 2px solid rgba(56, 88, 233, .35);
+      color: var(--primary-dark);
+      font-size: clamp(1.65rem, 5.2vw, 3.1rem);
+      line-height: 1.05;
+      font-weight: 950;
+      letter-spacing: -.05em;
+      overflow-wrap: anywhere;
+    }
+
+    .certificate-body {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.6vw, 1.13rem);
+    }
+
+    .certificate-details {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .certificate-detail {
+      min-width: 0;
+      padding: 14px;
+      border: 1px solid rgba(216, 225, 242, .95);
+      border-radius: 16px;
+      background: rgba(255,255,255,.84);
+    }
+
+    .certificate-detail span {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 950;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .certificate-detail strong {
+      display: block;
+      color: var(--ink);
+      overflow-wrap: anywhere;
+      line-height: 1.25;
+    }
+
+    .certificate-signoff {
+      margin: 20px 0 0;
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .certificate-date {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .certificate-print-note {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      font-weight: 850;
+      color: var(--ink);
+    }
+
+    input {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: var(--ink);
+      background: #fff;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(56, 88, 233, .13);
+    }
+
+
+    .confetti-layer {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      overflow: hidden;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      top: -18px;
+      width: 9px;
+      height: 16px;
+      border-radius: 3px;
+      opacity: .95;
+      animation: confettiFall 1200ms ease-out forwards;
+    }
+
+    @keyframes confettiFall {
+      to {
+        transform: translateY(105vh) rotate(540deg);
+        opacity: 0;
+      }
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .92rem;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .bonus-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .progress-strip,
+      .grid-3,
+      .example-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(100% - 22px, var(--max));
+        padding-top: 14px;
+      }
+
+      .hero-panel,
+      .side-panel,
+      .card {
+        border-radius: 22px;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .grid-2,
+      .grid-3,
+      .progress-strip,
+      .example-strip,
+      .certificate-form-grid,
+      .certificate-details {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .button,
+      .button-row .button,
+      .button-row .link-button {
+        width: 100%;
+      }
+
+      .quiz-actions {
+        gap: 10px;
+      }
+
+      .quiz-actions .button {
+        padding-inline: 10px;
+        font-size: clamp(.82rem, 3.4vw, .95rem);
+      }
+
+      .video-shell {
+        border-radius: 20px;
+      }
+
+      .video-frame {
+        border-radius: 14px;
+      }
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .001ms !important;
+      }
+    }
+
+    @media print {
+      @page {
+        size: landscape;
+        margin: .35in;
+      }
+
+      html,
+      body {
+        background: #fff !important;
+      }
+
+      body::before,
+      .skip-link,
+      .confetti-layer,
+      .hero,
+      .progress-strip,
+      #learn,
+      #watch,
+      #quiz,
+      #results,
+      footer,
+      #bonus > :not(.certificate-card),
+      .certificate-card > :not(#certificateArea) {
+        display: none !important;
+      }
+
+      .page,
+      main,
+      #bonus,
+      .certificate-card {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        background: #fff !important;
+      }
+
+      #certificateArea {
+        display: grid !important;
+        align-content: center !important;
+        min-height: calc(100vh - .7in) !important;
+        width: 100% !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: 2px solid #253bb4 !important;
+        background: #fff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to lesson</a>
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+
+  <div class="page">
+    <header class="hero" id="top">
+      <section class="hero-panel" aria-labelledby="pageTitle">
+        <div class="eyebrow">Chew Gang Training</div>
+        <h1 id="pageTitle">Chew Gang's Growth Mindset Training</h1>
+        <p class="lead">Train your brain to get stronger. This short lesson teaches one life-changing idea: skills are built with practice, better strategies, feedback, and time.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#learn">Begin training</a>
+        </div>
+      </section>
+
+      <aside class="side-panel" aria-label="Training overview">
+        <div class="mission-card">
+          <strong>For kids</strong>
+          <p>Simple, direct, and not overwhelming. One step at a time.</p>
+        </div>
+        <div class="mission-card">
+          <strong>What they will do</strong>
+          <p>Learn the idea, watch the video, answer the quiz, and unlock a bonus lesson.</p>
+        </div>
+        <div class="mission-card">
+          <strong>What success means</strong>
+          <p>They understand that ability is not fixed. They can grow by practicing smarter and not quitting.</p>
+        </div>
+      </aside>
+    </header>
+
+    <nav class="progress-strip" aria-label="Training steps">
+      <div class="step-pill"><span class="number">1</span><strong>Learn</strong><span>Understand the idea first.</span></div>
+      <div class="step-pill"><span class="number">2</span><strong>Watch</strong><span>Play the video on this page.</span></div>
+      <div class="step-pill"><span class="number">3</span><strong>Quiz</strong><span>Check what you know.</span></div>
+      <div class="step-pill"><span class="number">4</span><strong>Bonus</strong><span>Unlock the 1% Better lesson.</span></div>
+    </nav>
+
+    <main id="main">
+      <section class="card" id="learn" aria-labelledby="learnTitle">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Step 1</div>
+            <h2 id="learnTitle">Learn the big idea before the video.</h2>
+          </div>
+          <p>A growth mindset means you believe you can improve. It does not mean everything is easy. It means your brain and skills can grow when you use effort, strategy, feedback, and time.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="mini-card">
+            <h3>Skills are built.</h3>
+            <p>You are not stuck with the skill level you have today. Practice can build stronger brain connections.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Mistakes are information.</h3>
+            <p>A mistake is not proof that you are bad at something. It shows what to try next.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Strategy matters.</h3>
+            <p>Trying hard helps, but trying a better way helps even more. Ask for feedback and adjust.</p>
+          </article>
+        </div>
+
+        <div class="grid-2" style="margin-top:14px">
+          <article class="mindset-box fixed">
+            <h3>Fixed mindset sounds like this</h3>
+            <ul class="phrase-list">
+              <li>I am just not good at this.</li>
+              <li>If I make a mistake, I failed.</li>
+              <li>Smart people should not need help.</li>
+            </ul>
+          </article>
+          <article class="mindset-box growth">
+            <h3>Growth mindset sounds like this</h3>
+            <ul class="phrase-list">
+              <li>I am not good at this yet.</li>
+              <li>This mistake can teach me something.</li>
+              <li>I can ask for help and try a better strategy.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="card" id="watch" aria-labelledby="watchTitle">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Step 2</div>
+            <h2 id="watchTitle">Watch the video.</h2>
+          </div>
+          <p>Listen for this idea: people are not simply born with all the ability they will ever have. Ability can develop over time, like a muscle.</p>
+        </div>
+
+        <div class="video-shell">
+          <div class="video-frame" aria-label="Growth mindset video player">
+            <iframe
+              id="growthVideo"
+              title="Growth mindset video"
+              loading="eager"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+          <p class="video-caption">Watch the video here. When it ends, click <strong>I finished watching</strong> to continue.</p>
+        </div>
+
+        <div class="local-warning" id="adultSetup" hidden>
+          <strong>Adult setup note</strong>
+          <p>You are opening this as a downloaded file on your computer. YouTube may block the embedded player from local files. Publish the included <strong>index.html</strong> file to a free static host, then send the hosted HTTPS link.</p>
+        </div>
+
+        <div class="button-row" style="margin-top:16px">
+          <button class="button primary" id="finishedVideoBtn" type="button">I finished watching</button>
+        </div>
+
+        <div class="after-watch" id="afterWatch" hidden>
+          <h3>Before you start the quiz, remember these three ideas.</h3>
+          <p>You do not need perfect answers. You just need to think carefully and try.</p>
+          <ul class="checklist">
+            <li>Your brain can get stronger with practice.</li>
+            <li>Hard things are not a stop sign. They are a training signal.</li>
+            <li>Better strategies, feedback, and time help you improve.</li>
+          </ul>
+          <div class="button-row quiz-start-row">
+            <button class="button primary" id="startQuizBtn" type="button">Start the quiz</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="quiz" aria-labelledby="quizTitle" hidden>
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Step 3</div>
+            <h2 id="quizTitle">Growth mindset quiz</h2>
+          </div>
+          <p>Answer one question at a time. If you miss one, that is feedback, not failure.</p>
+        </div>
+
+        <div class="quiz-panel">
+          <div class="quiz-topline">
+            <span id="questionCount">Question 1</span>
+            <span id="scoreTracker">Score: 0</span>
+          </div>
+          <div class="progress-bar" aria-hidden="true"><div class="progress-fill" id="quizProgress"></div></div>
+          <h3 class="question-title" id="questionText"></h3>
+          <div class="choices" id="choices" role="group" aria-label="Answer choices"></div>
+          <div class="feedback" id="feedback" aria-live="polite">Choose the best answer.</div>
+          <div class="quiz-actions">
+            <button class="button secondary" id="backToVideoBtn" type="button">Back to video</button>
+            <button class="button primary" id="nextQuestionBtn" type="button" disabled>Next question</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="results" aria-labelledby="resultsTitle" hidden>
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Step 4</div>
+            <h2 id="resultsTitle">Your result</h2>
+          </div>
+          <p id="resultSummary">Your score will show here.</p>
+        </div>
+
+        <div class="result-card">
+          <div class="score-number" id="scoreNumber">0 <span>out of 9</span></div>
+          <h3 id="resultTitle">Result title</h3>
+          <p id="resultMessage">Result message.</p>
+          <div class="button-row" id="resultActions" style="margin-top:16px"></div>
+          <div class="review-list" id="reviewList" hidden></div>
+        </div>
+      </section>
+
+      <section class="card bonus-card" id="bonus" aria-labelledby="bonusTitle" hidden>
+        <div class="unlock-band">Prize unlocked</div>
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Bonus lesson</div>
+            <h2 id="bonusTitle">The 1% Better Rule</h2>
+          </div>
+          <p>You earned the bonus. This is the part that shows why a growth mindset can change a life when you keep using it.</p>
+        </div>
+
+        <div class="bonus-hero">
+          <div class="bonus-callout">
+            <h3>The big secret is small.</h3>
+            <p>Getting 1% better sounds almost too tiny to matter. But if today’s tiny win becomes the new starting point for tomorrow, the gains begin to stack. That stacking is called compounding.</p>
+          </div>
+          <div class="big-math" aria-label="One percent better every day for one year equals about thirty seven point eight times better in a simple math model.">
+            <div>
+              <span class="formula">1.01<sup>365</sup> = 37.8</span>
+              <span class="means">In a simple math model, 1% better every day for one year becomes about 37.8 times bigger.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="note-box">
+            <h3>Think of your skill like a game level.</h3>
+            <p>If your skill starts at level 100, one day of 1% better only moves you to 101. That feels tiny. But a year of tiny daily upgrades can turn level 100 into about level 3,778 in the pure math model.</p>
+          </article>
+          <article class="note-box">
+            <h3>What 1% can look like today.</h3>
+            <p>One focused practice round. One better question. One corrected mistake. One extra page read. One math problem you redo until it makes sense. Small enough to actually do, powerful enough to matter.</p>
+          </article>
+        </div>
+
+        <div class="example-strip" aria-label="Small daily actions that count as one percent better">
+          <div class="example-step"><strong>Notice</strong><p>Find one thing that was hard.</p></div>
+          <div class="example-step"><strong>Improve</strong><p>Try one better strategy.</p></div>
+          <div class="example-step"><strong>Ask</strong><p>Get one piece of feedback.</p></div>
+          <div class="example-step"><strong>Repeat</strong><p>Come back tomorrow.</p></div>
+        </div>
+
+        <h3>How fast can 1% stack up?</h3>
+        <p style="color:var(--muted); margin-bottom:0">These cards use a simple math model, not a promise that real life works perfectly like a calculator. The lesson is this: small improvements repeated for a long time can become much bigger than they look at first.</p>
+        <div class="stack-grid" aria-label="Simple examples of one percent improvement over time">
+          <article class="stack-card">
+            <span class="stack-time">30 days</span>
+            <strong>About 1.35 times</strong>
+            <p>Small wins start to become visible.</p>
+            <div class="stack-example">100 skill points becomes about 135.</div>
+          </article>
+          <article class="stack-card">
+            <span class="stack-time">100 days</span>
+            <strong>About 2.7 times</strong>
+            <p>Consistent practice starts to separate you from where you began.</p>
+            <div class="stack-example">100 skill points becomes about 270.</div>
+          </article>
+          <article class="stack-card">
+            <span class="stack-time">1 year</span>
+            <strong>About 37.8 times</strong>
+            <p>This is why daily practice can look ordinary at first and amazing later.</p>
+            <div class="stack-example">100 skill points becomes about 3,778.</div>
+          </article>
+          <article class="stack-card">
+            <span class="stack-time">10 years</span>
+            <strong>Huge in the formula</strong>
+            <p>The calculator number gets too big to picture.</p>
+            <div class="stack-example">The real-life lesson: years of practice can build serious skill.</div>
+          </article>
+          <article class="stack-card">
+            <span class="stack-time">20 years</span>
+            <strong>Even bigger</strong>
+            <p>Real humans have limits, but long-term compounding is still powerful.</p>
+            <div class="stack-example">Learning this young gives you more time to build.</div>
+          </article>
+        </div>
+
+        <div class="soft-warning">
+          <strong>Important truth:</strong> Growth mindset is powerful, but it is not magic. You still need rest, good teaching, practice, feedback, health, and time. The goal is not to become perfect overnight. The goal is to become better than yesterday and keep building.
+        </div>
+
+        <details class="math-details">
+          <summary>Show the huge percentage numbers</summary>
+          <p>In the pure math model, 1% better every day for 10 years is about a 592,944,857,206,917,690% increase. For 20 years, it is about a 3,515,836,036,881,321,284,039,938,659,790,939% increase. These are not realistic promises for human life. They are a dramatic way to see the power of compounding.</p>
+        </details>
+
+        <div class="certificate-card">
+          <h3>Claim your certificate.</h3>
+          <p>You passed the training. Add your name and one tiny action you will use after today, then print the certificate or save it as a PDF.</p>
+          <div class="certificate-form-grid">
+            <label for="nameInput">Your name
+              <input id="nameInput" type="text" maxlength="50" placeholder="Example: Jordan">
+            </label>
+            <label for="skillInput">Skill I want to build
+              <input id="skillInput" type="text" maxlength="60" placeholder="Example: math, reading, soccer, drawing">
+            </label>
+            <label for="actionInput">My 1% action today
+              <input id="actionInput" type="text" maxlength="90" placeholder="Example: redo one hard problem slowly">
+            </label>
+          </div>
+
+          <div class="certificate-preview" id="certificateArea" aria-label="Certificate of completion">
+            <div class="certificate-label">Certificate of Completion</div>
+            <h3>Chew Gang's Growth Mindset Training</h3>
+            <div class="certificate-name" id="certificateName">Growth Mindset Graduate</div>
+            <p class="certificate-body">has completed this training and understands that ability can grow with effort, strategy, feedback, and time.</p>
+            <div class="certificate-details">
+              <div class="certificate-detail">
+                <span>Quiz result</span>
+                <strong id="certificateScore">Passed</strong>
+              </div>
+              <div class="certificate-detail">
+                <span>Skill to build</span>
+                <strong id="certificateSkill">A skill I choose</strong>
+              </div>
+              <div class="certificate-detail">
+                <span>1% action</span>
+                <strong id="certificateAction">One small action today</strong>
+              </div>
+            </div>
+            <p class="certificate-signoff">Keep building. One focused step at a time.</p>
+            <p class="certificate-date" id="certificateDate">Completed today</p>
+          </div>
+
+          <p class="certificate-print-note">Tip: choose “Save as PDF” in the print window if you want a digital certificate.</p>
+          <div class="button-row" style="margin-top:14px">
+            <button class="button success" id="printCertificateBtn" type="button">Print or save certificate</button>
+            <button class="button secondary" id="restartLessonBtn" type="button">Restart lesson</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>This lesson does not save answers or collect information. Refreshing the page starts fresh.</p>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      const VIDEO_ID = 'KUWn_TJTrnU';
+      const PASSING_SCORE = 7;
+
+      const questions = [
+        {
+          text: 'What does growth mindset mean?',
+          choices: [
+            'You can improve your abilities with practice, strategies, feedback, and time.',
+            'You are already perfect at every skill.',
+            'You should only do things that feel easy.',
+            'Mistakes mean you should quit.'
+          ],
+          correct: 0,
+          explain: 'Growth mindset means your abilities can grow when you practice, learn, and keep adjusting.'
+        },
+        {
+          text: 'Are people just born with a growth mindset, or can they develop it?',
+          choices: [
+            'Only babies can have it.',
+            'People can develop it over time, like building a muscle.',
+            'You either have it forever or you never can.',
+            'It only matters for school, not life.'
+          ],
+          correct: 1,
+          explain: 'A growth mindset can be developed. The more you practice thinking this way, the stronger it gets.'
+        },
+        {
+          text: 'Which sentence shows a growth mindset?',
+          choices: [
+            'I cannot do this yet.',
+            'I am bad at this forever.',
+            'If I need help, I am not smart.',
+            'Mistakes prove I am not talented.'
+          ],
+          correct: 0,
+          explain: 'The word “yet” matters. It leaves room for learning and improvement.'
+        },
+        {
+          text: 'What should you do when something feels hard?',
+          choices: [
+            'Quit so nobody sees you struggle.',
+            'Assume you will never understand it.',
+            'Slow down, try a strategy, ask for feedback, and keep practicing.',
+            'Only pretend to understand.'
+          ],
+          correct: 2,
+          explain: 'Hard things are training moments. Strategy, feedback, and practice help you improve.'
+        },
+        {
+          text: 'What is a mistake?',
+          choices: [
+            'Proof that you are not smart.',
+            'A useful signal that shows what to learn next.',
+            'Something you should hide every time.',
+            'A reason to stop trying.'
+          ],
+          correct: 1,
+          explain: 'Mistakes give information. They help you find the next step.'
+        },
+        {
+          text: 'Which choice is the best example of “trying smarter”?',
+          choices: [
+            'Doing the same thing again and again without paying attention.',
+            'Asking what went wrong and trying a better method.',
+            'Giving up after the first try.',
+            'Only practicing what you already know.'
+          ],
+          correct: 1,
+          explain: 'Effort is stronger when you combine it with a better strategy.'
+        },
+        {
+          text: 'What does growth mindset NOT mean?',
+          choices: [
+            'You can improve over time.',
+            'You should learn from feedback.',
+            'You will become perfect at everything instantly if you just believe.',
+            'You can get stronger by practicing the right way.'
+          ],
+          correct: 2,
+          explain: 'Growth mindset is not magic. It helps you improve, but it still takes time, practice, and good strategies.'
+        },
+        {
+          text: 'Why is feedback helpful?',
+          choices: [
+            'It can show you one specific thing to improve.',
+            'It means you failed forever.',
+            'It is only useful for adults.',
+            'It proves practice does not matter.'
+          ],
+          correct: 0,
+          explain: 'Good feedback gives you a next move. That is how improvement happens.'
+        },
+        {
+          text: 'What is the best reason to keep practicing when you are young?',
+          choices: [
+            'Because your brain and habits are growing, and small improvements can stack up over time.',
+            'Because practice should always feel easy.',
+            'Because you must be the best at everything.',
+            'Because talent never changes.'
+          ],
+          correct: 0,
+          explain: 'Young brains and habits can grow a lot. Small improvements can build into big changes.'
+        }
+      ];
+
+      const els = {
+        video: document.getElementById('growthVideo'),
+        adultSetup: document.getElementById('adultSetup'),
+        finishedVideoBtn: document.getElementById('finishedVideoBtn'),
+        afterWatch: document.getElementById('afterWatch'),
+        startQuizBtn: document.getElementById('startQuizBtn'),
+        quiz: document.getElementById('quiz'),
+        questionCount: document.getElementById('questionCount'),
+        scoreTracker: document.getElementById('scoreTracker'),
+        quizProgress: document.getElementById('quizProgress'),
+        questionText: document.getElementById('questionText'),
+        choices: document.getElementById('choices'),
+        feedback: document.getElementById('feedback'),
+        backToVideoBtn: document.getElementById('backToVideoBtn'),
+        nextQuestionBtn: document.getElementById('nextQuestionBtn'),
+        results: document.getElementById('results'),
+        resultSummary: document.getElementById('resultSummary'),
+        scoreNumber: document.getElementById('scoreNumber'),
+        resultTitle: document.getElementById('resultTitle'),
+        resultMessage: document.getElementById('resultMessage'),
+        resultActions: document.getElementById('resultActions'),
+        reviewList: document.getElementById('reviewList'),
+        bonus: document.getElementById('bonus'),
+        confettiLayer: document.getElementById('confettiLayer'),
+        nameInput: document.getElementById('nameInput'),
+        skillInput: document.getElementById('skillInput'),
+        actionInput: document.getElementById('actionInput'),
+        certificateName: document.getElementById('certificateName'),
+        certificateScore: document.getElementById('certificateScore'),
+        certificateSkill: document.getElementById('certificateSkill'),
+        certificateAction: document.getElementById('certificateAction'),
+        certificateDate: document.getElementById('certificateDate'),
+        printCertificateBtn: document.getElementById('printCertificateBtn'),
+        restartLessonBtn: document.getElementById('restartLessonBtn')
+      };
+
+      let current = 0;
+      let selected = null;
+      let score = 0;
+      let answers = [];
+
+      function setupVideo() {
+        const params = new URLSearchParams({
+          rel: '0',
+          modestbranding: '1',
+          playsinline: '1',
+          enablejsapi: '0'
+        });
+
+        if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+          params.set('origin', window.location.origin);
+          els.video.src = 'https://www.youtube.com/embed/' + VIDEO_ID + '?' + params.toString();
+          return;
+        }
+
+        els.adultSetup.hidden = false;
+        els.video.srcdoc = '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0f172a;color:#fff}body{display:grid;place-items:center;text-align:center;padding:28px}.box{max-width:560px}.label{display:inline-block;margin-bottom:12px;padding:7px 11px;border:1px solid rgba(255,255,255,.22);border-radius:999px;color:#dbe4ff;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}h2{margin:0 0 10px;font-size:clamp(24px,4vw,38px);line-height:1}p{margin:0;color:#cbd5e1;font-size:16px;line-height:1.5}</style></head><body><div class="box"><span class="label">Hosted page needed</span><h2>Video will play here after publishing.</h2><p>Open the hosted HTTPS link, not the downloaded file, and the YouTube video will load inside this page.</p></div></body></html>';
+      }
+
+      function scrollToEl(el) {
+        if (!el) return;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        el.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      }
+
+      function startQuiz() {
+        current = 0;
+        selected = null;
+        score = 0;
+        answers = [];
+        els.results.hidden = true;
+        els.bonus.hidden = true;
+        els.bonus.classList.remove('unlocked');
+        els.reviewList.hidden = true;
+        els.reviewList.innerHTML = '';
+        els.quiz.hidden = false;
+        els.startQuizBtn.textContent = 'Return to quiz';
+        renderQuestion();
+        scrollToEl(els.quiz);
+      }
+
+      function renderQuestion() {
+        const q = questions[current];
+        selected = null;
+        els.questionCount.textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+        els.scoreTracker.textContent = 'Score: ' + score;
+        els.quizProgress.style.width = ((current) / questions.length * 100) + '%';
+        els.questionText.textContent = q.text;
+        els.feedback.className = 'feedback';
+        els.feedback.textContent = 'Choose the best answer.';
+        els.nextQuestionBtn.disabled = true;
+        els.nextQuestionBtn.textContent = current === questions.length - 1 ? 'See my score' : 'Next question';
+        els.choices.innerHTML = '';
+
+        q.choices.forEach(function (choiceText, index) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'choice';
+          btn.textContent = choiceText;
+          btn.addEventListener('click', function () { chooseAnswer(index); });
+          els.choices.appendChild(btn);
+        });
+      }
+
+      function chooseAnswer(index) {
+        if (selected !== null) return;
+
+        const q = questions[current];
+        selected = index;
+        const isCorrect = index === q.correct;
+        if (isCorrect) score += 1;
+
+        answers[current] = { selected: index, correct: q.correct, isCorrect: isCorrect };
+
+        Array.from(els.choices.children).forEach(function (btn, i) {
+          btn.disabled = true;
+          if (i === q.correct) btn.classList.add('correct');
+          if (i === index && !isCorrect) btn.classList.add('incorrect');
+          if (i === index) btn.classList.add('selected');
+        });
+
+        els.feedback.className = 'feedback ' + (isCorrect ? 'good' : 'needs-work');
+        els.feedback.textContent = (isCorrect ? 'Correct. ' : 'Not quite. ') + q.explain;
+        els.scoreTracker.textContent = 'Score: ' + score;
+        els.nextQuestionBtn.disabled = false;
+        els.quizProgress.style.width = ((current + 1) / questions.length * 100) + '%';
+      }
+
+      function nextQuestion() {
+        if (selected === null) return;
+        if (current < questions.length - 1) {
+          current += 1;
+          renderQuestion();
+          scrollToEl(els.quiz);
+        } else {
+          showResults();
+        }
+      }
+
+      function showResults() {
+        const passed = score >= PASSING_SCORE;
+        els.quiz.hidden = true;
+        els.results.hidden = false;
+        els.startQuizBtn.textContent = 'View results';
+        els.resultActions.innerHTML = '';
+        els.scoreNumber.innerHTML = score + ' <span>out of ' + questions.length + '</span>';
+
+        if (passed) {
+          els.resultSummary.textContent = 'You passed and unlocked the bonus lesson.';
+          els.resultTitle.textContent = 'Strong work. You understand the big idea.';
+          els.resultMessage.textContent = 'You showed that you know ability can grow with effort, strategy, feedback, and time. Your bonus lesson is now unlocked below.';
+          addAction('Review answers', 'secondary', toggleReview);
+          addAction('Take quiz again', 'secondary', startQuiz);
+          setCertificateDate();
+          updateCertificate();
+          unlockBonus();
+        } else {
+          els.resultSummary.textContent = 'Keep practicing. This is feedback, not failure.';
+          els.resultTitle.textContent = 'You are still building it.';
+          els.resultMessage.textContent = 'A growth mindset means you use this score as information. Review the lesson or try the quiz again. You only need ' + PASSING_SCORE + ' correct answers to unlock the bonus.';
+          addAction('Try quiz again', 'primary', startQuiz);
+          addAction('Review the video', 'secondary', function () { scrollToEl(document.getElementById('watch')); });
+          addAction('Review answers', 'secondary', toggleReview);
+          els.bonus.hidden = true;
+        }
+
+        renderReview();
+        scrollToEl(els.results);
+      }
+
+      function addAction(label, style, handler) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'button ' + style;
+        btn.textContent = label;
+        btn.addEventListener('click', handler);
+        els.resultActions.appendChild(btn);
+      }
+
+      function renderReview() {
+        els.reviewList.innerHTML = '';
+        questions.forEach(function (q, i) {
+          const item = document.createElement('div');
+          item.className = 'review-item';
+          const userAnswer = q.choices[answers[i] ? answers[i].selected : -1] || 'No answer';
+          const correctAnswer = q.choices[q.correct];
+          item.innerHTML = '<strong>' + (i + 1) + '. ' + escapeHtml(q.text) + '</strong>' +
+            '<p>Your answer: ' + escapeHtml(userAnswer) + '</p>' +
+            '<p>Best answer: ' + escapeHtml(correctAnswer) + '</p>' +
+            '<p>' + escapeHtml(q.explain) + '</p>';
+          els.reviewList.appendChild(item);
+        });
+      }
+
+      function toggleReview() {
+        els.reviewList.hidden = !els.reviewList.hidden;
+        if (!els.reviewList.hidden) scrollToEl(els.reviewList);
+      }
+
+      function unlockBonus() {
+        els.bonus.hidden = false;
+        window.setTimeout(function () {
+          els.bonus.classList.add('unlocked');
+          makeConfetti();
+        }, 250);
+      }
+
+      function makeConfetti() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        els.confettiLayer.innerHTML = '';
+        const colors = ['#3858e9', '#6a3df5', '#0c7a55', '#f59e0b', '#162033'];
+        for (let i = 0; i < 56; i += 1) {
+          const piece = document.createElement('span');
+          piece.className = 'confetti-piece';
+          piece.style.left = Math.random() * 100 + 'vw';
+          piece.style.background = colors[i % colors.length];
+          piece.style.animationDelay = (Math.random() * 280) + 'ms';
+          piece.style.transform = 'translateY(0) rotate(' + (Math.random() * 180) + 'deg)';
+          els.confettiLayer.appendChild(piece);
+        }
+        window.setTimeout(function () { els.confettiLayer.innerHTML = ''; }, 1700);
+      }
+
+      function updateCertificate() {
+        const name = els.nameInput.value.trim();
+        const skill = els.skillInput.value.trim();
+        const action = els.actionInput.value.trim();
+
+        els.certificateName.textContent = name || 'Growth Mindset Graduate';
+        els.certificateScore.textContent = score >= PASSING_SCORE ? score + ' out of ' + questions.length + ' correct' : 'Passed';
+        els.certificateSkill.textContent = skill || 'A skill I choose';
+        els.certificateAction.textContent = action || 'One small action today';
+      }
+
+      function setCertificateDate() {
+        try {
+          els.certificateDate.textContent = 'Completed on ' + new Date().toLocaleDateString(undefined, {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+        } catch (err) {
+          els.certificateDate.textContent = 'Completed today';
+        }
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      els.finishedVideoBtn.addEventListener('click', function () {
+        els.afterWatch.hidden = false;
+        els.finishedVideoBtn.hidden = true;
+        els.afterWatch.setAttribute('tabindex', '-1');
+        scrollToEl(els.afterWatch);
+        window.setTimeout(function () { els.afterWatch.focus({ preventScroll: true }); }, 250);
+      });
+
+      els.startQuizBtn.addEventListener('click', function () {
+        if (!els.quiz.hidden) {
+          scrollToEl(els.quiz);
+          return;
+        }
+        if (!els.results.hidden) {
+          scrollToEl(els.results);
+          return;
+        }
+        startQuiz();
+      });
+      els.backToVideoBtn.addEventListener('click', function () { scrollToEl(document.getElementById('watch')); });
+      els.nextQuestionBtn.addEventListener('click', nextQuestion);
+      els.nameInput.addEventListener('input', updateCertificate);
+      els.skillInput.addEventListener('input', updateCertificate);
+      els.actionInput.addEventListener('input', updateCertificate);
+      els.printCertificateBtn.addEventListener('click', function () { updateCertificate(); window.print(); });
+      els.restartLessonBtn.addEventListener('click', function () { window.location.hash = '#top'; window.location.reload(); });
+
+      setCertificateDate();
+      setupVideo();
+    }());
+  </script>
+</body>
+</html>
