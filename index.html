@@ -39,6 +39,7 @@
 
     body {
       margin: 0;
+      overflow-x: hidden;
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--ink);
       background:
@@ -881,34 +882,21 @@
       position: relative;
       overflow: hidden;
       margin-top: 14px;
-      padding: clamp(22px, 4vw, 38px);
+      padding: clamp(24px, 4vw, 42px);
       border: 2px solid #b7c5ff;
       border-radius: 26px;
       background:
-        linear-gradient(135deg, rgba(237, 241, 255, .96), #ffffff 45%, rgba(233, 248, 242, .82)),
-        #fff;
+        linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
       text-align: center;
-      box-shadow: inset 0 0 0 7px rgba(255,255,255,.78), 0 16px 40px rgba(31, 48, 87, .08);
+      box-shadow: inset 0 0 0 7px rgba(237, 241, 255, .78), 0 16px 40px rgba(31, 48, 87, .08);
     }
 
     .certificate-preview::before {
       content: "";
       position: absolute;
       inset: 16px;
-      border: 1px solid rgba(56, 88, 233, .22);
+      border: 1px solid rgba(56, 88, 233, .20);
       border-radius: 18px;
-      pointer-events: none;
-    }
-
-    .certificate-preview::after {
-      content: "";
-      position: absolute;
-      right: -120px;
-      top: -170px;
-      width: 360px;
-      height: 360px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(56, 88, 233, .12), transparent 64%);
       pointer-events: none;
     }
 
@@ -1205,6 +1193,10 @@
         background: #fff !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+      }
+
+      #certificateArea::before {
+        border-color: rgba(56, 88, 233, .20) !important;
       }
     }
   </style>
@@ -1787,7 +1779,6 @@
           els.resultTitle.textContent = 'You are still building it.';
           els.resultMessage.textContent = 'A growth mindset means you use this score as information. Review the lesson or try the quiz again. You only need ' + PASSING_SCORE + ' correct answers to unlock the bonus.';
           addAction('Try quiz again', 'primary', startQuiz);
-          addAction('Review the video', 'secondary', function () { scrollToEl(document.getElementById('watch')); });
           addAction('Review answers', 'secondary', toggleReview);
           els.bonus.hidden = true;
         }
